@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ids": "https://w3id.org/idsa/core/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard": "https://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "gax-participant": "http://w3id.org/gaia-x/participant#",
+    "ex": "http://example.org/"
+  },
+  "@id": "ex:TIB",
+  "@type": "gax-participant:Provider",
+  "gax-participant:hasLegallyBindingName": "Technische Informationsbibliothek (TIB), Leibniz Information Centre for Science and Technology, and University Library",
+  "gax-participant:hasLogo": {
+    "@id": "https://www.tib.eu/typo3conf/ext/tib_tmpl_bootstrap/Resources/Public/gfx/logos/tib-full-en.svg"
+  },
+  "gax-participant:hasCommercialRegister": {
+    "@type": "vcard:Address",
+    "vcard:street-address": "NOT APPLICABLE",
+    "vcard:postal-code": ""
+  },
+  "gax-participant:hasLegallyBindingAddress": {
+    "@type": "vcard:Address",
+    "vcard:street-address": "Welfengarten 1 B",
+    "vcard:postal-code": "30167"
+  },
+  "gax-participant:hasLegalForm": {
+   "@value": "E.g. Technische Informationsbibliothek (TIB) is a foundation of public law of the state of Lower Saxony."
+  },
+  "gax-participant:hasWebAddress": {
+    "@value": "https://www.tib.eu/en/",
+    "@type": "xsd:anyURI"
+  },
+  "gax-participant:hasSalesTaxID": {
+    "@value": "E.g. DE 214931803"
+  },
+  "gax-participant:hasLegalRegistrationNumber": {
+    "@value": "NOT APPLICABLE"
+  },
+  "gax-participant:hasJurisdiction": {
+    "@value": "Germany"
+  },
+  "gax-participant:hasIndividualContactLegal": {
+    "@type": "vcard:Agent",
+    "vcard:given-name": "Judith",
+    "vcard:family-name": "Ludwig",
+    "vcard:hasEmail": {
+      "@id": "mailto:justiziariat@tib.eu"
+    }
+  },
+  "gax-participant:hasIndividualContactTechnical": {
+    "@type": "vcard:Agent",
+    "vcard:given-name": "Axel",
+    "vcard:family-name": "Klinger",
+    "vcard:hasEmail": {
+      "@id": "mailto:axel.klinger@tib.eu"
+    }
+  },
+  "gax-participant:hasCertification": {
+    "@id": "gax-participant:NOT APPLICABLE"
+  },
+  "gax-participant:hasLocation": {
+    "@type": "gax-participant:Region",
+    "gax-participant:hasName": "Germany"
+  },
+  "gax-participant:hasCloudLocation": [
+    {
+      "@type": "gax-participant:Region",
+      "gax-participant:hasName": "NOT APPLICABLE"
+    }
+  ],
+  "gax-participant:hasMarketingImage": {
+    "@value": "https://www.tib.eu/fileadmin/Daten/presse/bilder/pressefotos/TIB_Aussenansicht1_RGB.JPG",
+    "@type": "xsd:anyURI"
+  },
+  "gax-participant:description": "With its new Terminology Service, TIB – Leibniz Information Centre for Science and Technology and University Library provides a single point of access to terminology from domains such as architecture, chemistry, computer science, mathematics and physics. The Terminology Service is a repository for terminological resources based on semantic W3C standards like the Web Ontology Language (OWL 2). You can browse ontologies through the website or use its API to retrieve terminological information and use it in your technical services.",
+  "gax-participant:hasDataProtectionOfficer": {
+    "@type": "vcard:Agent",
+    "vcard:nickname": "Datenschutzbeauftragte",
+    "vcard:hasEmail": {
+      "@id": "mailto:datenschutz@tib.eu"
+    }
+  }
+}

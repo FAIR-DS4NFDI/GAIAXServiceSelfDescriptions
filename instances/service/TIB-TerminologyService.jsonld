@@ -1,0 +1,133 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "https://www.w3.org/ns/dcat#" ,
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ids": "https://w3id.org/idsa/core/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "vcard": "https://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gax-core": "http://w3id.org/gaia-x/core#",
+    "gax-participant": "http://w3id.org/gaia-x/participant#",
+    "gax-service": "http://w3id.org/gaia-x/service#",
+    "ex": "http://example.org/"
+  },
+  "@id": "ex:TIB_Terminology_Service",
+  "@type": "gax-service:ServiceOffering",
+  "gax-service:hasServiceTitle": "TIB Terminology Service",
+  "gax-service:hasVersion": "NOT APPLICABLE, the service has no version number",
+  "gax-service:providedBy": {
+    "@id": "ex:TIB",
+    "@type": "gax-participant:Provider"
+  },
+  "dcat:keyword": [
+    "Terminology",
+    "Lookup",
+    "Retrieval",
+    "REST API",
+    "Ontology"
+  ],
+  "gax-service:hasMarketingImage": {
+    "@value": "NOT APPLICABLE",
+    "@type": "xsd:anyURI"
+  },
+  "gax-service:hasScreenshot": [
+    {
+      "schema:contentUrl": "NOT APPLICABLE",
+      "rdfs:comment": "No official screenshots at the moment."
+    },
+    {
+      "schema:contentUrl": "NOT APPLICABLE",
+      "rdfs:comment": "No official screenshots at the moment."
+    }
+  ],
+  "gax-service:hasWebAddress": {
+    "@value": "https://service.tib.eu/ts4tib/index",
+    "@type": "xsd:anyURI"
+  },
+  "gax-service:hasProvisionType": "E.g., Hybrid (TIB TS in no CLOUD-Service)" ,
+  "gax-service:hasServiceModel": "E.g., IaaS (TIB TS in no CLOUD-Service)" ,
+  "dct:modified": {
+    "@value": "2020-11-16T12:00:00+01:00",
+    "@type": "xsd:dateTimeStamp"
+  },
+  "gax-service:hasApiType": "REST",
+  "dct:description": "With its new Terminology Service, TIB – Leibniz Information Centre for Science and Technology and University Library provides a single point of access to terminology from domains such as architecture, chemistry, computer science, mathematics and physics. The Terminology Service is a repository for terminological resources based on semantic W3C standards like the Web Ontology Language (OWL 2). You can browse ontologies through the website or use its API to retrieve terminological information and use it in your technical services.",
+  "gax-service:consumes": {
+    "@type": "gax-service:ApiDescription",
+    "dct:description": "NOT (easily) APPLICABLE",
+    "gax-service:hasContentType": "",
+    "rdfs:comment": "Our service has several functions that are documented here: https://service.tib.eu/ts4tib/swagger-ui.html. Christoph asked me to provide a link to the API description."
+  },
+  "gax-service:produces": {
+    "@type": "gax-service:ApiDescription",
+    "dct:description": "NOT (easily) APPLICABLE",
+    "gax-service:hasContentType": "",
+    "rdfs:comment": "Our service has several functions that are documented here: https://service.tib.eu/ts4tib/swagger-ui.html. Christoph asked me to provide a link to the API description."
+  },
+  "gax-service:hasDeploymentDetails": {
+    "gax-service:requires": {
+      "gax-service:hasMinCpuCore": 0,
+      "gax-service:hasMinMemory": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "MB"
+      },
+      "gax-service:hasUploadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+            "@value": "00.0",
+            "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      },
+      "gax-service:hasDownloadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "00.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      }
+    },
+    "gax-service:hasInstructions": {
+      "gax-service:hasDeploymentScriptUrl": "UNKNOWN",
+      "gax-service:hasRepository": {
+        "schema:url": "https://github.com/TIBHannover/OLS/",
+        "gax-service:hasLogin": "username",
+        "gax-service:hasPassword": "password"
+      }
+    }
+  },
+  "gax-service:hasBilling": [
+    {
+      "@type": "gax-service:PayPerUseModel",
+      "gax-service:hasPrice": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "00.00",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "EUR"
+      }
+    },
+    {
+      "@type": "gax-service:BasicPaymentModel",
+      "gax-service:hasPrice": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "00.00",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "EUR"
+      },
+      "gax-service:hasFrequenceOfPayment": "month"
+    }
+  ]
+}
