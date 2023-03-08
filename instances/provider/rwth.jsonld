@@ -1,0 +1,89 @@
+{
+    "@context": {
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ids": "https://w3id.org/idsa/core/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "vcard": "https://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org/",
+      "gax-participant": "http://w3id.org/gaia-x/participant#",
+      "ex": "http://example.org/"
+    },
+    "@id": "ex:rwth",
+    "@type": "gax-participant:Provider",
+    "gax-participant:hasLegallyBindingName": "RWTH Aachen University",
+    "gax-participant:hasLogo": {
+      "@id": "https://www.itc.rwth-aachen.de/global/show_picture.asp?id=aaaaaaaaaakewfn"
+    },
+    "gax-participant:hasCommercialRegister": {
+      "@type": "vcard:Address",
+      "vcard:street-address": "Templergraben 55",
+      "vcard:postal-code": "52062"
+    },
+    "gax-participant:hasLegallyBindingAddress": {
+      "@type": "vcard:Address",
+      "vcard:street-address": "Templergraben 55",
+      "vcard:postal-code": "52062"
+    },
+    "gax-participant:hasLegalForm": {
+     "@value": "KöR"
+    },
+    "gax-participant:hasWebAddress": {
+      "@value": "https://www.rwth-aachen.de",
+      "@type": "xsd:anyURI"
+    },
+    "gax-participant:hasSalesTaxID": {
+      "@value": "DE 121689807"
+    },
+    "gax-participant:hasLegalRegistrationNumber": {
+      "@value": "N/A"
+    },
+    "gax-participant:hasJurisdiction": {
+      "@value": "Germany"
+    },
+    "gax-participant:hasIndividualContactLegal": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "Rektor der RWTH Aachen University",
+      "vcard:hasEmail": {
+        "@id": "mailto:rektorat@rwth-aachen.de"
+      }
+    },
+    "gax-participant:hasIndividualContactTechnical": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "IT-Servicedesk",
+      "vcard:hasEmail": {
+        "@id": "mailto:servicedesk@itc.rwth-aachen.de"
+      }
+    },
+    "gax-participant:hasCertification": {
+      "@id": "gax-participant:ISO_9001"
+    },
+    "gax-participant:hasLocation": {
+      "@type": "gax-participant:Region",
+      "gax-participant:hasName": "Germany"
+    },
+    "gax-participant:hasCloudLocation": [
+      {
+        "@type": "gax-participant:Region",
+        "gax-participant:hasName": "Aachen 1"
+      },
+      {
+        "@type": "gax-participant:Region",
+        "gax-participant:hasName": "Aachen 2"
+      }
+    ],
+    "gax-participant:hasMarketingImage": {
+      "@value": "https://www.itc.rwth-aachen.de/global/show_picture.asp?id=aaaaaaaaaahgykz&w2=672&h2=447&clip=center,672,447&q=77&meta=0",
+      "@type": "xsd:anyURI"
+    },
+    "gax-participant:description": "A central institution at RWTH Aachen, the IT Center provides services and resources for institutes, staff, and students at the University as well as for its external partners.",
+    "gax-participant:hasDataProtectionOfficer": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "Datenschutzbeauftragter",
+      "vcard:hasEmail": {
+        "@id": "mailto:dsb@rwth-aachen.de"
+      }
+    }
+  }
