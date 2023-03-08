@@ -1,0 +1,93 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ids": "https://w3id.org/idsa/core/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard": "https://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "gax-participant": "http://w3id.org/gaia-x/participant#",
+    "ex": "http://example.org/"
+  },
+  "@id": "ex:MIC",
+  "@type": "gax-participant:Provider",
+  "gax-participant:hasLegallyBindingName": "Medical Informatics Center, Department for Medical Data Science , Universitätklinikum Leipzig",
+  "gax-participant:hasLogo": {
+    "@id": "NOT APPLICABLE"
+  },
+  "gax-participant:hasCommercialRegister": {
+    "@type": "vcard:Address",
+    "vcard:street-address": "NOT APPLICABLE",
+    "vcard:postal-code": ""
+  },
+  "gax-participant:hasLegallyBindingAddress": {
+    "@type": "vcard:Address",
+    "vcard:street-address": "Welfengarten 1 B",
+    "vcard:postal-code": "30167"
+  },
+  "gax-participant:hasLegalForm": {
+    "@value": "Department for Medical Data Sciences are an interdisciplinary team focusing on medical data sciences in order to increase the value for the patients."
+  },
+  "gax-participant:hasWebAddress": {
+    "@value": "https://www.uniklinikum-leipzig.de/einrichtungen/medical-data-science/en",
+    "@type": "xsd:anyURI"
+  },
+  "gax-participant:hasLegalRegistrationNumber": {
+    "@value": "NOT APPLICABLE"
+  },
+  "gax-participant:hasJurisdiction": {
+    "@value": "Germany"
+  },
+  "gax-participant:hasIndividualContactLegal": [
+    {
+      "@type": "vcard:Agent",
+      "vcard:given-name": "Toralf",
+      "vcard:family-name": "Kirsten",
+      "vcard:hasEmail": {
+        "@id": "mailto:tkirsten@izbi.uni-leipzig.de"
+      }
+    },
+    {
+      "@type": "vcard:Agent",
+      "vcard:given-name": "Macedo",
+      "vcard:family-name": "Sousa Maia",
+      "vcard:hasEmail": {
+        "@id": "mailto:Macedo.SousaMaia@medizin.uni-leipzig.de"
+      }
+    }
+  ],
+  "gax-participant:hasIndividualContactTechnical": [{
+    "@type": "vcard:Agent",
+    "vcard:given-name": "Toralf",
+    "vcard:family-name": "Kirsten",
+    "vcard:hasEmail": {
+      "@id": "mailto:tkirsten@izbi.uni-leipzig.de"
+    }
+  },{
+    "@type": "vcard:Agent",
+    "vcard:given-name": "Macedo",
+    "vcard:family-name": "Sousa Maia",
+    "vcard:hasEmail": {
+      "@id": "mailto:Macedo.SousaMaia@medizin.uni-leipzig.de"
+    }
+  }],
+  "gax-participant:hasCertification": {
+    "@id": "gax-participant:NOT APPLICABLE"
+  },
+  "gax-participant:hasLocation": {
+    "@type": "gax-participant:Region",
+    "gax-participant:hasName": "Germany"
+  },
+  "gax-participant:hasCloudLocation": [
+    {
+      "@type": "gax-participant:Region",
+      "gax-participant:hasName": "NOT APPLICABLE"
+    }
+  ],
+  "gax-participant:hasMarketingImage": {
+    "@value": "NOT APPLICABLE",
+    "@type": "xsd:anyURI"
+  }
+}
