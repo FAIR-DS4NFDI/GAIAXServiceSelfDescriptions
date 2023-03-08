@@ -1,0 +1,108 @@
+{
+    "@context": {
+        "dct": "http://purl.org/dc/terms/",
+        "dcat": "https://www.w3.org/ns/dcat#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "ids": "https://w3id.org/idsa/core/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "vcard": "https://www.w3.org/2006/vcard/ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "gax-core": "http://w3id.org/gaia-x/core#",
+        "gax-participant": "http://w3id.org/gaia-x/participant#",
+        "gax-service": "http://w3id.org/gaia-x/service#",
+        "ex": "http://example.org/"
+    },
+    "@id": "ex:FAIR_Validation_Services",
+    "@type": "gax-service:ServiceOffering",
+    "gax-service:hasServiceTitle": "FAIR Validation Services",
+    "gax-service:hasVersion": "1.0",
+    "gax-service:providedBy": {
+        "@id": "ex:Fraunhofer_FIT",
+        "@type": "gax-participant:Provider"
+    },
+    "dcat:keyword": [
+        "FAIR",
+        "FAIR Validation",
+        "FAIR Evaluation",
+        "Metadata FAIRness evaluation"
+    ],
+    "gax-service:hasMarketingImage": {
+        "@value": "NOT APPLICABLE",
+        "@type": "xsd:anyURI"
+    },
+    "gax-service:hasScreenshot": [
+    {
+      "schema:contentUrl": "Not applicable",
+      "rdfs:comment": "No official screenshots at the moment."
+    }],
+    "gax-service:hasWebAddress": {
+        "@value": "https://fair.pht.computational.bio/",
+        "@type": "xsd:anyURI"
+    },
+    "gax-service:hasProvisionType": "Service",
+    "gax-service:hasServiceModel": "SaaS",
+    "dct:modified": {
+        "@value": "2021-12-17T11:50:00+01:00",
+        "@type": "xsd:dateTimeStamp"
+    },
+    "dct:description": "FAIR evaluator service for metadata FAIRness evaluation. We evaluate the FAIRness of offered resources(metadata) using ‘FAIR evaluator service’. This is a standalone external service which will be accessible for everyone to use and can be accessed via the REST API endpoint.",
+    "gax-service:hasApiType": "REST",
+    "gax-service:consumes": {
+        "@type": "gax-service:ApiDescription",
+        "gax:description": "It is possible to send a POST requests only for sending metadata and receving the evaluation score.",
+        "gax:hasContentType": "application/json"
+    },
+    "gax-service:produces": {
+        "@type": "gax-service:ApiDescription",
+		"gax:description": "The API  will send the metadata evaluation score in return to the user."
+        "gax-service:hasContentType": "application/json"
+        
+    },
+    "gax-service:hasDeploymentDetails": {
+        "gax-service:requires": {
+            "gax-service:hasMinCpuCore": 0,
+            "gax-service:hasMinMemory": {
+                "@type": "gax-core:Measure",
+                "gax-core:hasValue": {
+                    "@value": "4.0",
+                    "@type": "xsd:float"
+                },
+                "gax-core:hasUnit": "GB"
+            },
+            "gax-service:hasUploadBandwidth": {
+                "@type": "gax-core:Measure",
+                "gax-core:hasValue": {
+                    "@value": "00.0",
+                    "@type": "xsd:float"
+                },
+                "gax-core:hasUnit": "Mbit/s"
+            },
+            "gax-service:hasDownloadBandwidth": {
+                "@type": "gax-core:Measure",
+                "gax-core:hasValue": {
+                    "@value": "00.0",
+                    "@type": "xsd:float"
+                },
+                "gax-core:hasUnit": "Mbit/s"
+            }
+        },
+        "gax-service:hasInstructions": {
+            "gax-service:hasDeploymentScriptUrl": "https://gitlab.fit.fraunhofer.de/abu.ibne.bayazid/fairevaluator",
+            "gax-service:hasRepository": {
+                "schema:url": "https://gitlab.fit.fraunhofer.de/abu.ibne.bayazid/fairevaluator",
+                "gax-service:hasLogin": "username",
+                "gax-service:hasPassword": "password"
+            }
+        }
+    },
+    "gax-service:openApiDescription": {
+        "@id": "Not applicable"
+    },
+    "gax-service:hasDocumentationUrl": {
+        "@value": "https://gitlab.fit.fraunhofer.de/abu.ibne.bayazid/fairevaluator",
+        "@type": "xsd:anyURI"
+    }
+}
