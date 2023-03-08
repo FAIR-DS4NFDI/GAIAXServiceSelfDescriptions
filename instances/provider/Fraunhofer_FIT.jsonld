@@ -31,7 +31,7 @@
    "@value": "Not applicable"
   },
   "gax-participant:hasWebAddress": {
-    "@value": "https://www.tib.eu/en/",
+    "@value": "https://www.fit.fraunhofer.de/",
     "@type": "xsd:anyURI"
   },
   "gax-participant:hasSalesTaxID": {
