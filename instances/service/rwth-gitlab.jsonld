@@ -1,0 +1,78 @@
+{
+    "@context": {
+      "dct": "http://purl.org/dc/terms/",
+      "dcat": "https://www.w3.org/ns/dcat#" ,
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ids": "https://w3id.org/idsa/core/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "vcard": "https://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "gax-core": "http://w3id.org/gaia-x/core#",
+      "gax-participant": "http://w3id.org/gaia-x/participant#",
+      "gax-service": "http://w3id.org/gaia-x/service#",
+      "ex": "http://example.org/"
+    },
+    "@id": "ex:rwth-gitlab-service",
+    "@type": "gax-service:ServiceOffering",
+    "gax-service:hasServiceTitle": "GitLab of RWTH Aachen University",
+    "gax-service:hasVersion": "0.1",
+    "gax-service:providedBy": {
+      "@id": "ex:rwth",
+      "@type": "gax-participant:Provider"
+    },
+    "dcat:keyword": [
+      "Version Control",
+      "Source Code",
+      "Workflows",
+      "Devops"
+    ],
+    "gax-service:hasMarketingImage": {
+      "@value": "https://api.app.rwth-aachen.de/v3/sabio/app/image?path=0962a984657bb2e901657bc9e2810004/1jifm42ljvvhw/Software%20Engineering%20Services/screenshot_2019-10-11_sign_in.png",
+      "@type": "xsd:anyURI"
+    },
+    "gax-service:hasScreenshot": [
+      {
+        "schema:contentUrl": "https://api.app.rwth-aachen.de/v3/sabio/app/image?path=0962a984657bb2e901657bc9e2810004/1jifm42ljvvhw/Software%20Engineering%20Services/firefox_2018-09-06_16-13-03.png",
+        "rdfs:comment": "GitLab at RWTH Aachen University"
+      },
+      {
+        "schema:contentUrl": "https://api.app.rwth-aachen.de/v3/sabio/app/image?path=0962a984657bb2e901657bc9e2810004/1jifm42ljvvhw/Software%20Engineering%20Services/screenshot_2019-10-11_sign_in.png",
+        "rdfs:comment": "GitLab at RWTH Aachen University"
+      }
+    ],
+    "gax-service:hasWebAddress": {
+      "@value": "https://git.rwth-aachen.de" ,
+      "@type": "xsd:anyURI"
+    },
+    "gax-service:hasProvisionType": "Private" ,
+    "gax-service:hasServiceModel": "SaaS" ,
+    "dct:modified": {
+      "@value": "2021-12-15T19:58:00+01:00",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "gax-service:hasApiType": ["REST", "GIT", "GITLABRUNNER" ],
+    "dct:description": "The service builds version controlled (git) repositories and holds workflows based on the users' input.",
+    "gax-service:consumes": {
+      "@type": "gax-service:ApiDescription",
+      "dct:description": "Files under version control.",
+      "gax-service:hasContentType": "text/*",
+      "rdfs:comment": "Version Controlled Files"
+    },
+    "gax-service:produces": [
+        {
+            "@type": "gax-service:ApiDescription",
+            "dct:description": "The service builds version controlled (git) repositories and holds workflows based on the users' input.",
+            "gax-service:hasContentType": "application/csv",
+            "rdfs:comment": "Repositories"
+        },{
+            "@type": "gax-service:ApiDescription",
+            "dct:description": "Workflows can provide binary information like build artifacts, software packages or container images.",
+            "gax-service:hasContentType": "application/octet-stream",
+            "rdfs:comment": "Build Artifacts"
+        }
+    ]
+  }
+  
