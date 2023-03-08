@@ -1,0 +1,50 @@
+{
+    "@context": {
+      "dct": "http://purl.org/dc/terms/",
+      "dcat": "https://www.w3.org/ns/dcat#" ,
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ids": "https://w3id.org/idsa/core/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "vcard": "https://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "gax-core": "http://w3id.org/gaia-x/core#",
+      "gax-participant": "http://w3id.org/gaia-x/participant#",
+      "gax-service": "http://w3id.org/gaia-x/service#",
+      "ex": "http://example.org/"
+    },
+    "@id": "ex:otc-cce",
+    "@type": "gax-service:ServiceOffering",
+    "gax-service:hasServiceTitle": "Open Telekom Cloud Cloud Container Engine",
+    "gax-service:hasVersion": "0.1",
+    "gax-service:providedBy": {
+      "@id": "ex:otc",
+      "@type": "gax-participant:Provider"
+    },
+    "dcat:keyword": [
+      "Container",
+      "Kubernetes",
+      "Autoscale"
+    ],    
+    "gax-service:hasWebAddress": {
+        "@value": "https://docs.otc.t-systems.com/cce/index.html" ,
+        "@type": "xsd:anyURI"
+      },
+    "gax-service:hasProvisionType": "Public Cloud" ,
+    "gax-service:hasServiceModel": "PaaS" ,
+    "dct:modified": {
+      "@value": "2020-11-16T12:00:00+01:00",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "gax-service:hasApiType": "KUBERNETES",
+    "dct:description": "Cloud Container Engine (CCE) is a scalable, high-performance container service. It is built on Docker technology and scales your applications within seconds. CCE also provides fast application shipping and deployment, automatic O&M, and other Docker container lifecycle management features.",
+    "gax-service:consumes": {
+      "@type": "gax-service:ApiDescription",
+      "dct:description": "Runs containers based on image descriptions",
+      "gax-service:hasContentType": "pplication/vnd.oci.image.manifest.v1+json",
+      "rdfs:comment": "Container Images"
+    }
+  }
+  
