@@ -1,0 +1,70 @@
+{
+    "@context": {
+      "dct": "http://purl.org/dc/terms/",
+      "dcat": "https://www.w3.org/ns/dcat#" ,
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ids": "https://w3id.org/idsa/core/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "vcard": "https://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "gax-core": "http://w3id.org/gaia-x/core#",
+      "gax-participant": "http://w3id.org/gaia-x/participant#",
+      "gax-service": "http://w3id.org/gaia-x/service#",
+      "ex": "http://example.org/"
+    },
+    "@id": "ex:rwth-gitlab-runner",
+    "@type": "gax-service:ServiceOffering",
+    "gax-service:hasServiceTitle": "GitLab Runner Service",
+    "gax-service:hasVersion": "0.1",
+    "gax-service:providedBy": {
+      "@id": "ex:rwth",
+      "@type": "gax-participant:Provider"
+    },
+    "dcat:keyword": [
+      "Analytics",
+      "Workflow",
+      "Deployment",
+      "Container"
+    ],
+    "gax-service:hasProvisionType": "Public Cloud" ,
+    "gax-service:hasServiceModel": "SaaS" ,
+    "dct:modified": {
+      "@value": "2020-11-16T12:00:00+01:00",
+      "@type": "xsd:dateTimeStamp"
+    },
+    "gax-service:hasApiType": "OTHER",
+    "dct:description": "The service offers to run CI workflows defined in GitLab repositories.",
+    "gax-service:consumes": {
+      "@type": "gax-service:ApiDescription",
+      "dct:description": "Git Repositories containing a .gitlab-ci.yml",
+      "gax-service:hasContentType": "multipart/mixed",
+      "rdfs:comment": "Git Repositories"
+    },    
+    "gax-service:hasWebAddress": {
+      "@value": "https://git.rwth-aachen.de" ,
+      "@type": "xsd:anyURI"
+    },
+    "gax-service:produces": [
+      {
+        "@type": "gax-service:ApiDescription",
+        "dct:description": "The service returns build artifacts defined in the workflow definition",
+        "gax-service:hasContentType": "multipart/mixed",
+        "rdfs:comment": "Build Artifacts"
+      },
+      {
+        "@type": "gax-service:ApiDescription",
+        "dct:description": "The service runs build steps as containers using a kubernetes compatible container engine",
+        "gax-service:hasContentType": "pplication/vnd.oci.image.manifest.v1+json",
+        "rdfs:comment": "Workflow Steps"
+      }
+    ],
+    "gax-service:hasDeploymentDetails": {
+      "gax-service:requires": {
+        "gax-service:hasApiType": "KUBERNETES"
+      }
+    }
+  }
+  
