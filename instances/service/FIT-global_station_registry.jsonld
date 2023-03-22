@@ -1,0 +1,124 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "https://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ids": "https://w3id.org/idsa/core/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "vcard": "https://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gax-core": "http://w3id.org/gaia-x/core#",
+    "gax-participant": "http://w3id.org/gaia-x/participant#",
+    "gax-service": "http://w3id.org/gaia-x/service#",
+    "ex": "http://example.org/"
+  },
+  "@id": "ex:global_station_registry",
+  "@type": "gax-service:ServiceOffering",
+  "gax-service:hasServiceTitle": "Station Registry for Personal Health Train",
+  "gax-service:hasVersion": "There is no version number",
+  "gax-service:providedBy": {
+    "@id": "ex:MIC",
+    "@type": "gax-participant:Provider"
+  },
+  "gax-service:hasMarketingImage": {
+    "@value": "NOT APPLICABLE",
+    "@type": "xsd:anyURI"
+  },
+  "gax-service:hasScreenshot": {
+    "schema:contentUrl": "NOT APPLICABLE",
+    "rdfs:comment": "No official screenshots at the moment."
+  },
+  "dcat:keyword": [
+    "PHT",
+    "Station Registry",
+    "Personal Health Train",
+    "Distributed analytics",
+    "Health informatics"
+  ],
+  "gax-service:hasWebAddress": {
+    "@value": "https://stationreg.pht.computational.bio/",
+    "@type": "xsd:anyURI"
+  },
+  "dct:description": "The Personal Health Train (PHT) is a distributed analytics infrastructure allowing to analyze data that is available and managed at different locations. We call such data locations in the context of the PHT as stations. This git repository covers RESTful service for a station registry.",
+  "gax-service:hasApiType": "REST",
+  "gax:openApiDescription": {
+    "@id": "https://api.stationreg.pht.computational.bio/"
+  },
+  "gax-service:consumes": {
+    "@type": "gax:ApiDescription",
+    "gax:hasContentType": "json"
+  },
+  "gax-service:produces": {
+    "@type": "gax:ApiDescription",
+    "gax:description": "Station registry collects and manages required metadata about stations that is then used by the PHT.",
+    "gax:hasContentType": "application/json"
+  },
+  "gax-service:hasDeploymentDetails": {
+    "gax-service:requires": {
+      "gax-service:hasMinCpuCore": 0,
+      "gax-service:hasMinMemory": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "GB"
+      },
+      "gax-service:hasUploadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      },
+      "gax-service:hasDownloadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      }
+    }
+  },
+  
+  "gax-service:hasBilling": [
+    {
+      "@type": "gax:BasicPaymentModel",
+      "gax:description": "For Free"
+    }
+  ],
+  "gax-participant:hasIndividualContactTechnical": [
+    {
+      "@type": "vcard:Agent",
+      "vcard:given-name": "Toralf",
+      "vcard:family-name": "Kirsten",
+      "vcard:hasEmail": {
+        "@id": "mailto:tkirsten@izbi.uni-leipzig.de"
+      }
+    },
+    {
+      "@type": "vcard:Agent",
+      "vcard:given-name": "Macedo",
+      "vcard:family-name": "Sousa Maia",
+      "vcard:hasEmail": {
+        "@id": "mailto:Macedo.SousaMaia@medizin.uni-leipzig.de"
+      }
+    }
+  ],
+  "gax-participant:hasLocation": {
+    "@type": "gax-participant:Region",
+    "gax-participant:hasName": "Germany"
+  },
+  "gax-service:hasInstructions": {
+    "gax-service:hasRepository": {
+      "schema:url": "https://gitlab.com/ul-mds/infrastructures/pht-station-registry/global-station-registry-service",
+      "gax-service:hasLogin": "username",
+      "gax-service:hasPassword": "password"
+    }
+  }
+}
