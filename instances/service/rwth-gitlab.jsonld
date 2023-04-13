@@ -13,7 +13,9 @@
       "gax-core": "http://w3id.org/gaia-x/core#",
       "gax-participant": "http://w3id.org/gaia-x/participant#",
       "gax-service": "http://w3id.org/gaia-x/service#",
-      "ex": "http://example.org/"
+      "ex": "http://example.org/",
+      "dqv": "http://www.w3.org/ns/dqv#",
+      "sdmx-concept": "http://purl.org/linked-data/sdmx/2009/concept#"
     },
     "@id": "ex:rwth-gitlab-service",
     "@type": "gax-service:ServiceOffering",
@@ -52,6 +54,19 @@
     "dct:modified": {
       "@value": "2021-12-15T19:58:00+01:00",
       "@type": "xsd:dateTimeStamp"
+    },
+    "gax-service:hasService": {
+      "@id": "ex:data-quality-and-validation",
+      "@type": "gax-service:Service",
+      "schema:name": "Data_Quality_and_Validation",
+      "schema:description": "A service for data validation and data quality assessment.",
+      "schema:url": "https://git.rwth-aachen.de/fair-ds/ap-4-2-demonstrator/ap-4.2-data-validation-and-quality-assurance-demonstrator",
+      "dqv:hasQualityMeasurement": {
+        "@type": "dqv:QualityMeasurement",
+        "dqv:metric": "ex:data-quality-metric",
+        "dqv:value": "WARNING",
+        "sdmx-attribute:unitMeasure": "sdmx-concept:qualityAssmnt"
+      }
     },
     "gax-service:hasApiType": ["REST", "GIT", "GITLABRUNNER" ],
     "dct:description": "The service builds version controlled (git) repositories and holds workflows based on the users' input.",
