@@ -1,0 +1,142 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "dcat": "https://www.w3.org/ns/dcat#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "ids": "https://w3id.org/idsa/core/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "vcard": "https://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gax-core": "http://w3id.org/gaia-x/core#",
+    "gax-participant": "http://w3id.org/gaia-x/participant#",
+    "gax-service": "http://w3id.org/gaia-x/service#",
+    "ex": "http://example.org/"
+  },
+  "@id": "ex:Geo_Engine_Service",
+  "@type": "gax-service:ServiceOffering",
+  "gax-service:hasServiceTitle": "Geo Engine Service",
+  "gax-service:hasVersion": "0.1",
+  "gax-service:providedBy": {
+    "@id": "ex:umr",
+    "@type": "gax-participant:Provider"
+  },
+  "dcat:keyword": [
+    "GIS",
+    "spatio-temporal",
+    "geospatial"
+  ],
+  "gax-service:hasMarketingImage": {
+    "@value": "https://www.geoengine.de/wp-content/uploads/2020/11/logo.png",
+    "@type": "xsd:anyURI"
+  },
+  "gax-service:hasScreenshot": [
+    {
+      "schema:contentUrl": "https://www.geoengine.de/wp-content/uploads/2021/05/mof-sentinel.png",
+      "rdfs:comment": "Geo Engine User Interface"
+    }
+  ],
+  "gax-service:hasWebAddress": {
+    "@value": "https://www.geoengine.de",
+    "@type": "xsd:anyURI"
+  },
+  "gax-service:hasProvisionType": "Hybrid",
+  "gax-service:hasServiceModel": "SaaS",
+  "dct:modified": {
+    "@value": "2021-12-09T11:15:00+01:00",
+    "@type": "xsd:dateTimeStamp"
+  },
+  "gax-service:hasApiType": "REST",
+  "dct:description": "Geo Engine is a cloud-ready geo-spatial data processing platform.",
+  "gax-service:consumes": {
+    "@type": "gax-service:ApiDescription",
+    "dct:description": "REST"
+  },
+  "gax-service:produces": {
+    "@type": "gax-service:ApiDescription",
+    "dct:description": "The service returns the results of workflow computations on geo-spatial datasets.",
+    "gax-service:hasContentType": "application/octet-stream",
+    "rdfs:comment": "Workflow results"
+  },
+  "gax-service:hasDeploymentDetails": {
+    "gax-service:requires": {
+      "gax-service:hasMinCpuCore": 1,
+      "gax-service:hasMinMemory": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "512.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "MB"
+      },
+      "gax-service:hasUploadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "100.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      },
+      "gax-service:hasDownloadBandwidth": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "100.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "Mbit/s"
+      }
+    },
+    "gax-service:hasInstructions": {
+      "gax-service:hasDeploymentScriptUrl": "https://docs.geoengine.io/",
+      "gax-service:hasRepository": {
+        "schema:url": "https://github.com/geo-engine/geoengine",
+        "gax-service:hasLogin": "username",
+        "gax-service:hasPassword": "password"
+      }
+    }
+  },
+  "gax-service:hasBilling": [
+    {
+      "@type": "gax-service:PayPerUseModel",
+      "gax-service:hasPrice": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "EUR"
+      }
+    },
+    {
+      "@type": "gax-service:BasicPaymentModel",
+      "gax-service:hasPrice": {
+        "@type": "gax-core:Measure",
+        "gax-core:hasValue": {
+          "@value": "0.0",
+          "@type": "xsd:float"
+        },
+        "gax-core:hasUnit": "EUR"
+      },
+      "gax-service:hasFrequenceOfPayment": "month"
+    }
+  ],
+  "dcat:DataService": [
+    {
+      "@type": "dcat:DataService",
+      "dcat:endpointURL": "https://geoengine.nightly.m1.k8s.computational.bio/wcs",
+      "dcat:endpointDescription": "https://geoengine.nightly.m1.k8s.computational.bio/wcs/{workflow}?request=GetCapabilities"
+    },
+    {
+      "@type": "dcat:DataService",
+      "dcat:endpointURL": "https://geoengine.nightly.m1.k8s.computational.bio/wfs",
+      "dcat:endpointDescription": "https://geoengine.nightly.m1.k8s.computational.bio/wfs/{workflow}?request=GetCapabilities"
+    },
+    {
+      "@type": "dcat:DataService",
+      "dcat:endpointURL": "https://geoengine.nightly.m1.k8s.computational.bio/wms",
+      "dcat:endpointDescription": "https://geoengine.nightly.m1.k8s.computational.bio/wms/{workflow}?request=GetCapabilities"
+    }
+  ]
+}
