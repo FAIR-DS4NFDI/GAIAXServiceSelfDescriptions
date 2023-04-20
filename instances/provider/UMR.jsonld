@@ -1,0 +1,68 @@
+{
+    "@context": {
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "ids": "https://w3id.org/idsa/core/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "vcard": "https://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org/",
+      "gax-participant": "http://w3id.org/gaia-x/participant#",
+      "ex": "http://example.org/"
+    },
+    "@id": "ex:umr",
+    "@type": "gax-participant:Provider",
+    "gax-participant:hasLegallyBindingName": "Philipps-Universität Marburg",
+    "gax-participant:hasCommercialRegister": {
+      "@type": "vcard:Address",
+      "vcard:street-address": "NOT APPLICABLE",
+      "vcard:postal-code": ""
+    },
+    "gax-participant:hasLegallyBindingAddress": {
+      "@type": "vcard:Address",
+      "vcard:street-address": "Biegenstraße 10",
+      "vcard:postal-code": "35037"
+    },
+    "gax-participant:hasLegalForm": {
+     "@value": "KöR"
+    },
+    "gax-participant:hasWebAddress": {
+      "@value": "https://www.uni-marburg.de",
+      "@type": "xsd:anyURI"
+    },
+    "gax-participant:hasSalesTaxID": {
+      "@value": "DE 112590692"
+    },
+    "gax-participant:hasLegalRegistrationNumber": {
+      "@value": "N/A"
+    },
+    "gax-participant:hasJurisdiction": {
+      "@value": "Germany"
+    },
+    "gax-participant:hasIndividualContactLegal": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "",
+      "vcard:hasEmail": {
+        "@id": ""
+      }
+    },
+    "gax-participant:hasIndividualContactTechnical": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "IT-Servicedesk",
+      "vcard:hasEmail": {
+        "@id": "mailto:helpdesk@hrz.uni-marburg.de"
+      }
+    },
+    "gax-participant:hasLocation": {
+      "@type": "gax-participant:Region",
+      "gax-participant:hasName": "Germany"
+    },
+    "gax-participant:hasDataProtectionOfficer": {
+      "@type": "vcard:Agent",
+      "vcard:nickname": "Datenschutzbeauftragter",
+      "vcard:hasEmail": {
+        "@id": "mailto:datenschutz@uni-marburg.de"
+      }
+    }
+  }
